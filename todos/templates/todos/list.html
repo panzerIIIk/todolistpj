@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+</head>
+
+<body>
+    <h1>代辦事項列表</h1>
+    {% for todo in todos %}
+    <div class="todo-field">
+        <small>{{todo.created}}</small>
+        <div class="title">{{todo.title}}</div>
+        <div class="content">{{todo.content}}</div>
+        <div class="created">{{todo.created}}</div>
+        <div class="completed">{{todo.completed}}</div>
+        <div class="important">{{todo.important}}</div>
+
+        <a href="{% url 'todo-delete' todo.id %}">刪除</a>
+
+    </div>
+    {% endfor %}
+</body>
+
+</html>

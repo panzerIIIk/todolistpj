@@ -13,4 +13,11 @@
 -啟動server
     -python manage.py runserver
 
-    
+-同步資料表
+    -python manage.py migrate
+
+-建立管理員
+    -python manage.py createsuperuser
+
+-新增APP
+    -python manage.py startapp users

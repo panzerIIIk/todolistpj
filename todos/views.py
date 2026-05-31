@@ -20,7 +20,7 @@ def todo_delete(request, id):
 
     except:
         print("無此ID")
-    return redirect("todo_list")
+    return redirect("todo-list")
 
 
 def todo_create(request):

@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>更新待辦事項</title>
-</head>
+{% block head %}
+<title>更新待辦事項</title>
+<style>
+    body {
+        background-color: burlywood;
 
-<body>
-    <a href="{% url 'todo-list' %}">回首頁</a>
-    <h1>更新待辦事項</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">更新</button>
+    }
+</style>
+{% endblock %}
 
-    </form>
-    {% if message %}
-    {{message}}
-    {% endif %}
-</body>
+{% block content %}
 
-</html>
+<h1>更新待辦事項</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">更新</button>
+
+</form>
+{% if message %}
+{{message}}
+{% endif %}
+{% endblock %}

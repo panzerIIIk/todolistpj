@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block head %}
+    <title>Document</title>
+    {% endblock %}
+    <style>
+        #navbar {
+            background-color: goldenrod;
+            color: green;
+            padding: 12px;
+
+
+        }
+
+        #a {
+            background-color: gold;
+            color: beige;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <a href="{% url 'todo-list' %}">HOME</a>
+        <a href="{% url 'todo-create' %}">NEW</a>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>

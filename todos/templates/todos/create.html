@@ -1,27 +1,12 @@
 {% extends 'base.html' %}
-
 {% block head %}
-<title>更新待辦事項</title>
-<style>
-    body {
-        background-color: red;
-
-    }
-</style>
+<title>新增代辦事項</title>
 {% endblock %}
-
 {% block content %}
-
-
-
-<h1>新增待辦事項</h1>
+<h1>新增代辦事項</h1>
 <form action="" method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit">確定</button>
 </form>
-
-{% if message %}
-{{message}}
-{% endif %}
 {% endblock %}

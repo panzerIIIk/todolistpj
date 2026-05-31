@@ -9,7 +9,8 @@
 
 <body>
     <h1>新增待辦事項</h1>
-    <form action="">
+    <form action="" method="POST">
+        {% csrf_token %}
         {{form.as_p}}
         <button type="submit">確定</button>
         <a href="{% url 'todo-list' %}">回首頁</a>

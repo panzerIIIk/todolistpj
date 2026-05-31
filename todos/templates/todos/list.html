@@ -8,7 +8,9 @@
 </head>
 
 <body>
+    <a href="{% url 'todo-create' %}">新增</a>
     <h1>代辦事項列表</h1>
+
     {% for todo in todos %}
     <div class="todo-field">
         <small>{{todo.created}}</small>
@@ -18,7 +20,7 @@
         <div class="completed">{{todo.completed}}</div>
         <div class="important">{{todo.important}}</div>
 
-        <a href="{% url 'todo_delete' todo.id %}">刪除</a>
+        <a href="{% url 'todo-delete' todo.id %}" onclick="return confirm('是否確定刪除??')">刪除</a>
 
     </div>
     {% endfor %}
